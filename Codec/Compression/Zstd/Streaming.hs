@@ -99,10 +99,11 @@ compress level
              opos1 <- fromIntegral `fmap` peekPos obuf
              Done `fmap` shrink outSize dfp opos1
          | leftover > 0 -> do
+             opos1 <- fromIntegral `fmap` peekPos obuf
              dfp1 <- mallocByteString (fromIntegral leftover)
              poke obuf (buffer (unsafeForeignPtrToPtr dfp1) leftover)
              touchForeignPtr obfp
-             bs <- shrink outSize dfp opos
+             bs <- shrink outSize dfp opos1
              return (Produce bs (finish cfp obfp 0 dfp1))
 
 type ConsumeBlock ctx io = Ptr ctx -> Ptr (Buffer Out)

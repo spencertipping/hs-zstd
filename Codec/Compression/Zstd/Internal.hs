@@ -56,10 +56,10 @@ compressWith name compressor level (PS sfp off len)
               = bail name "unsupported compression level"
   | otherwise =
   withForeignPtr sfp $ \sp -> do
-    let src = sp `plusPtr` off
-    maxSize <- C.compressBound src
+    maxSize <- C.compressBound (fromIntegral len)
     dfp <- B.mallocByteString (fromIntegral maxSize)
     withForeignPtr dfp $ \dst -> do
+      let src = sp `plusPtr` off
       csz <- compressor dst maxSize src (fromIntegral len) (fromIntegral level)
       handleError csz name $ do
         let size = fromIntegral csz

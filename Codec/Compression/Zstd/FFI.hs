@@ -140,7 +140,7 @@ maxCLevel = fromIntegral c_maxCLevel
 
 -- | Compute the maximum compressed size of given source buffer.
 foreign import ccall unsafe "ZSTD_compressBound"
-    compressBound :: Ptr src         -- ^ Source buffer.
+    compressBound :: CSize -- ^ Size of input.
                   -> IO CSize
 
 foreign import ccall unsafe "ZSTD_isError"

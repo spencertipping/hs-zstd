@@ -25,7 +25,6 @@ module Codec.Compression.Zstd.Base
     (
     -- * One-shot functions
       compress
-    , compressBound
     , maxCLevel
     , decompress
     , getDecompressedSize
@@ -110,11 +109,6 @@ compress dst dstSize src srcSize level = checkError $
 -- | The maximum compression level supported by the library.
 maxCLevel :: Int
 maxCLevel = fromIntegral FFI.maxCLevel
-
--- | Compute the maximum compressed size of given source buffer.
-compressBound :: Ptr src         -- ^ Source buffer.
-              -> IO Int
-compressBound src = fromIntegral `fmap` FFI.compressBound src
 
 -- | Decompress a buffer.  The destination buffer must be already
 -- allocated.

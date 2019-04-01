@@ -26,10 +26,18 @@ import Test.Framework.Providers.QuickCheck2 (testProperty)
 import Test.QuickCheck
 import qualified Control.Exception as E
 import qualified Data.ByteString as B
+import qualified Data.ByteString.Char8 as B8
 import qualified Data.ByteString.Lazy as L
 import QuickCheckUtils
 
-Right dict = trainFromSamples 400 (replicate 100 "noooooooooo")
+dict = unsafePerformIO $ do
+  training0 <- B8.lines <$> B.readFile "tests/Properties.hs"
+  let training = concat (replicate 20 training0)
+  case trainFromSamples 1000 training of
+    Left e -> do
+        print e
+        error e
+    Right d -> return d
 
 t_rechunk cs bs = L.toStrict (rechunk cs bs) == bs
 

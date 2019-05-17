@@ -1,5 +1,5 @@
-name:                zstd
-version:             0.1.0.0
+name:                hs-zstd
+version:             0.1.1.0
 synopsis:            Haskell bindings to the Zstandard compression algorithm
 description:
   A fast lossless compression algorithm, targeting real-time
@@ -9,8 +9,8 @@ bug-reports:         https://github.com/facebookexperimental/hs-zstd/issues
 license:             BSD3
 license-file:        LICENSE
 author:              Bryan O'Sullivan
-maintainer:          bryano@fb.com
-copyright:           (c) 2016-present, Facebook, Inc. All rights reserved.
+maintainer:          luis@luispedro.org
+copyright:           (c) 2016-present, Facebook, Inc. All rights reserved.; 2019 Luis Pedro Coelho
 category:            Codec
 build-type:          Simple
 cabal-version:       >=1.10
@@ -136,4 +136,4 @@ benchmark benchmarks
 
 source-repository head
   type:     git
-  location: https://github.com/facebookexperimental//hs-zstd
+  location: https://github.com/luispedro/hs-zstd

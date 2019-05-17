@@ -1,5 +1,11 @@
 # Zstandard bindings for Haskell
 
+This is a fork of the original [Facebook
+project](https://github.com/facebookarchive/hs-zstd) which is unmaintained and
+produces incorrectly compressed files. This repository fixes these. If the
+original maintainers want to take the project back, I am happy to delete this
+one.
+
 This library provides Haskell bindings to the
 [Zstandard compression library](http://facebook.github.io/zstd/).
 
@@ -34,4 +40,4 @@ how to file bugs and submit changes to the code itself.
 ## API documentation
 
 The APIs should be easy to understand and work with, and you can find
-[documentation on Hackage](http://hackage.haskell.org/package/zstd).
+[documentation on Hackage](http://hackage.haskell.org/package/zst).

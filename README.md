@@ -1,5 +1,7 @@
 # Zstandard bindings for Haskell
 
+[![Travis](https://api.travis-ci.org/luispedro/hs-zstd.png)](https://travis-ci.org/luispedro/hs-zstd)
+
 This library provides Haskell bindings to the
 [Zstandard compression library](http://facebook.github.io/zstd/).
 

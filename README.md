@@ -1,5 +1,7 @@
 # Zstandard bindings for Haskell
 
+[![Travis](https://api.travis-ci.org/luispedro/hs-zstd.png)](https://travis-ci.org/luispedro/hs-zstd)
+
 This is a fork of the original [Facebook
 project](https://github.com/facebookarchive/hs-zstd) which is unmaintained and
 produces incorrectly compressed files. This repository fixes these. If the

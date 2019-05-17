@@ -1,4 +1,5 @@
 -- Copyright (c) 2016-present, Facebook, Inc.
+-- Copyright (c) 2019-present, Luis Pedro Coelho
 -- All rights reserved.
 --
 -- This source code is licensed under the BSD-style license found in
@@ -23,7 +24,6 @@ module Codec.Compression.Zstd.Types
     (
       Decompress(..)
     , Dict(..)
-    , fromDict
     , mkDict
     ) where
 

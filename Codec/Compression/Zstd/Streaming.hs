@@ -95,7 +95,7 @@ compress level
     check "endStream" (endStream cptr obuf) $ \leftover -> do
       touchForeignPtr cfp
       touchForeignPtr obfp
-      if | leftover == 0 -> do
+      if | leftover <= 0 -> do -- leftover will never be <0, but compiler does not know that
              opos1 <- fromIntegral `fmap` peekPos obuf
              Done `fmap` shrink outSize dfp opos1
          | leftover > 0 -> do

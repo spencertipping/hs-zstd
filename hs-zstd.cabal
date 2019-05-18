@@ -110,7 +110,7 @@ test-suite tests
     bytestring >= 0.9,
     test-framework >= 0.4,
     test-framework-quickcheck2 >= 0.2,
-    zstd
+    hs-zstd
 
 benchmark benchmarks
   hs-source-dirs:   benchmarks
@@ -124,7 +124,7 @@ benchmark benchmarks
     bytestring,
     criterion,
     ghc-prim,
-    zstd,
+    hs-zstd,
     zlib
 
   ghc-options: -Wall -O2

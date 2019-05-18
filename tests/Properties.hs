@@ -17,9 +17,7 @@ import Codec.Compression.Zstd
 import qualified Codec.Compression.Zstd.Lazy as L
 import qualified Codec.Compression.Zstd.Streaming as S
 import Codec.Compression.Zstd.Streaming (Result(..))
-import Data.Bits (xor)
 import Data.ByteString (ByteString, pack, unpack)
-import Data.Monoid ((<>))
 import System.IO.Unsafe (unsafePerformIO)
 import Test.Framework (Test, testGroup)
 import Test.Framework.Providers.QuickCheck2 (testProperty)

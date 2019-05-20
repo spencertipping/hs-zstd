@@ -1,0 +1,13 @@
+Version 0.1.1.2 2019-05-20 by luispedro
+	* Re-release v0.1.1.1 with updated info
+
+Version 0.1.1.1 2019-05-18 by luispedro (released as hs-zstd)
+	* Add missing files to package
+
+Version 0.1.1.0 2019-05-18 by luispedro (release as hs-zstd)
+	* Fix bugs
+	* Update to newer zstd version
+
+# 0.1.0.0
+
+* Initial release

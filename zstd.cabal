@@ -1,5 +1,5 @@
 name:                zstd
-version:             0.1.1.2
+version:             0.1.1.3
 synopsis:            Haskell bindings to the Zstandard compression algorithm
 description:
   A fast lossless compression algorithm, targeting real-time
@@ -37,18 +37,16 @@ flag standalone
 
 library
   exposed-modules:
+    Codec.Compression.Zstd
     Codec.Compression.Zstd.Base
+    Codec.Compression.Zstd.Base.Types
     Codec.Compression.Zstd.Efficient
     Codec.Compression.Zstd.FFI
-    Codec.Compression.Zstd.Streaming
-    Codec.Compression.Zstd.Types
-    Codec.Compression.Zstd
-    Codec.Compression.Zstd.Lazy
-
-  other-modules:
-    Codec.Compression.Zstd.Base.Types
     Codec.Compression.Zstd.FFI.Types
     Codec.Compression.Zstd.Internal
+    Codec.Compression.Zstd.Lazy
+    Codec.Compression.Zstd.Streaming
+    Codec.Compression.Zstd.Types
 
   if flag(standalone)
     c-sources:

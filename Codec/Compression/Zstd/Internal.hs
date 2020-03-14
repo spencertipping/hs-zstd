@@ -35,7 +35,7 @@ module Codec.Compression.Zstd.Internal
 import Codec.Compression.Zstd.Types (Decompress(..), Dict(..))
 import Control.Exception.Base (bracket)
 import Data.ByteString.Internal (ByteString(..))
-import Data.Word (Word, Word8)
+import Data.Word (Word8)
 import Foreign.C.Types (CInt, CSize)
 import Foreign.Marshal.Array (withArray)
 import Foreign.ForeignPtr (withForeignPtr)

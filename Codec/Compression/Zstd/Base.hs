@@ -85,7 +85,7 @@ module Codec.Compression.Zstd.Base
 import Codec.Compression.Zstd.Base.Types (CDict(..), DDict(..))
 import Codec.Compression.Zstd.FFI.Types (CCtx, DCtx)
 import Control.Exception.Base (bracket)
-import Data.Word (Word, Word64)
+import Data.Word (Word64)
 import Foreign.C.Types (CSize)
 import Foreign.ForeignPtr (ForeignPtr, newForeignPtr, withForeignPtr)
 import Foreign.Ptr (Ptr, castPtr)
